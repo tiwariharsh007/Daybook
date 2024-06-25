@@ -1,0 +1,314 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Montserrat", sans-serif;
+}
+
+:root {
+  --primary-color: #254336;
+  --secondary-color: #6b8a7a;
+  --tertiary-color: #b7b597;
+  --quad-color: #dad3be;
+  --font-family: "Arial, sans-serif";
+  --nav-height: 60px;
+}
+
+.navbar {
+  background-color: var(--primary-color);
+  width: 100%;
+  color: var(--quad-color);
+  padding: 2px;
+  box-sizing: border-box;
+}
+
+.hello {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.logo {
+  width: 3rem;
+  margin-right: 1em;
+}
+
+.profile {
+  padding: 1px;
+  width: 10rem;
+}
+
+/* Dropdown Menu */
+
+.dropbtn {
+  background-color: #04aa6d;
+  color: white;
+  padding: 16px;
+  font-size: 16px;
+  border: none;
+}
+
+/* The container <div> - needed to position the dropdown content */
+.dropdown {
+  position: relative;
+  display: inline-block;
+}
+
+/* Dropdown Content (Hidden by Default) */
+.dropdown-content {
+  display: none;
+  position: absolute;
+  background-color: #f1f1f1;
+  min-width: 160px;
+  box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+  z-index: 1;
+}
+
+/* Links inside the dropdown */
+.dropdown-content a {
+  color: black;
+  padding: 12px 16px;
+  text-decoration: none;
+  display: block;
+}
+
+/* Change color of dropdown links on hover */
+.dropdown-content a:hover {
+  background-color: #ddd;
+}
+
+/* Show the dropdown menu on hover */
+.dropdown:hover .dropdown-content {
+  display: block;
+}
+
+/* Change the background color of the dropdown button when the dropdown content is shown */
+.dropdown:hover .dropbtn {
+  background-color: #3e8e41;
+}
+
+.App {
+  text-align: center;
+}
+
+.App-header {
+  background-color: #282c34;
+  padding: 20px;
+  color: white;
+}
+
+p {
+  font-size: 1.2em;
+  color: #61dafb;
+}
+
+.left {
+  width: 20%;
+  background-color: var(--quad-color);
+  height: 100vh;
+  padding: 1rem;
+}
+
+.bar {
+  outline: none;
+  background-color: transparent;
+  border: none;
+  margin-top: 5rem;
+  margin-bottom: 3rem;
+  font-size: 2rem;
+  color: var(--primary-color);
+}
+
+.bar.selected {
+  background-color: green;
+  color: white;
+}
+
+/* src/components/ThoughtForm.css */
+.thought-form {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  max-width: 400px;
+  margin: 0 auto;
+  padding: 20px;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  background-color: #f9f9f9;
+}
+
+.date {
+  font-size: 16px;
+  color: #555;
+}
+
+.title-input,
+.description-textarea {
+  width: 100%;
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  font-size: 14px;
+}
+
+.title-input {
+  height: 40px;
+}
+
+.description-textarea {
+  height: 100px;
+  resize: vertical;
+}
+
+.buttons {
+  display: flex;
+  gap: 10px;
+}
+
+.button {
+  padding: 10px 20px;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  font-size: 14px;
+}
+
+.discard-button {
+  background-color: #f44336;
+  color: white;
+}
+
+.image-button {
+  background-color: yellowgreen;
+  color: white;
+}
+
+.done-button {
+  background-color: #4caf50;
+  color: white;
+}
+
+.right {
+  width: 80%;
+  overflow-y: scroll;
+}
+
+/* src/components/AuthForm.css */
+.auth-form {
+  max-width: 400px;
+  margin: 50px auto;
+  padding: 20px;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  background-color: var(--quad-color);
+}
+
+.auth-form h2 {
+  text-align: center;
+}
+
+.auth-form form {
+  display: flex;
+  flex-direction: column;
+}
+
+.auth-form label {
+  margin-bottom: 5px;
+}
+
+.auth-form input {
+  margin-bottom: 15px;
+  padding: 8px;
+  border: 1px solid var(--primary-color);
+  border-radius: 4px;
+}
+
+.auth-form button {
+  padding: 10px;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  font-size: 16px;
+  background-color: #4caf50;
+  color: white;
+  margin-top: 10px;
+}
+
+.auth-form button:hover {
+  background-color: #45a049;
+}
+
+/* src/components/Card.css */
+.card {
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  overflow: hidden;
+  max-width: 300px;
+  margin: 20px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  background-color: #fff;
+}
+
+.card-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px;
+  background-color: #f9f9f9;
+  border-bottom: 1px solid #ccc;
+}
+
+.card-date {
+  font-size: 14px;
+  color: #888;
+}
+
+.card-delete-button {
+  padding: 5px 10px;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  background-color: #f44336;
+  color: white;
+}
+
+.card-like-button {
+  font-size: large;
+  border: none;
+  cursor: pointer;
+  background-color: transparent;
+  color: red;
+}
+
+.card-delete-button:hover {
+  background-color: #d32f2f;
+}
+
+.card-image {
+  width: 100%;
+  height: auto;
+}
+
+.card-body {
+  padding: 15px;
+}
+
+.card-title {
+  font-size: 18px;
+  margin: 0 0 10px 0;
+}
+
+.card-text {
+  font-size: 14px;
+  color: #555;
+}
+
+.liked{
+
+  background-color: red;
+  color: white;
+}
